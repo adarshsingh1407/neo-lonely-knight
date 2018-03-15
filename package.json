@@ -1,7 +1,8 @@
 {
   "name": "neo-lonely-knight",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
+  "homepage": "https://adarshsingh1407.github.io/neo-lonely-knight",
   "dependencies": {
     "classnames": "^2.2.5",
     "custom-react-scripts": "^0.2.2",
@@ -17,9 +18,14 @@
     "toastr": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "gh-pages": "^1.1.0"
   }
 }
