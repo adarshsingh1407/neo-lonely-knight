@@ -2,7 +2,7 @@
   "name": "neo-lonely-knight",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://adarshsingh1407.github.io/neo-lonely-knight",
+  "homepage": "https://adarshsingh1407.github.io/neo-lonely-knight/",
   "dependencies": {
     "classnames": "^2.2.5",
     "custom-react-scripts": "^0.2.2",

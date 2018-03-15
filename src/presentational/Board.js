@@ -2,21 +2,17 @@ import React, { Component } from 'react';
 import Knight from './Knight';
 import BoardSquare from 'container/BoardSquare'
 import { DragDropContext } from 'react-dnd';
+import {Grid, Row, Col} from 'react-bootstrap'
 import HTML5Backend from 'react-dnd-html5-backend';
 
 class Board extends Component {
   constructor(props){
     super(props);
-    console.log(props);
     this.state = {};
     // INIT GAME USING this => props.initGame();
   }
   moveKnight(newKnightPosition) {
-    console.log('moveKnight', newKnightPosition);
     this.props.moveKnight(newKnightPosition);
-  }
-  componentWillReceiveProps(nextProps) {
-    console.log('componentWillReceiveProps', nextProps);
   }
   renderSquare(i) {
     const {gameState} = this.props;
@@ -49,8 +45,21 @@ class Board extends Component {
     }
 
     return (
-      <div className="chessboard">
-        {squares}
+      <div>
+        <Grid>
+          <Row>
+            <Col md={12}>
+              <b>Instructions: </b>Move the knight by drag-and-drop or clicking the destination square
+            </Col>
+          </Row>
+          <Row>
+            <Col md={12}>
+              <div className="chessboard">
+                {squares}
+              </div>
+            </Col>
+          </Row>
+        </Grid>
       </div>
     );
   }
