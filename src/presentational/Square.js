@@ -1,36 +1,15 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import classNames from 'classnames'
 
 export default class Square extends Component {
-  constructor(props){
-  	super(props);
-  	this.state = {
-      dbState: ''
-    };
-  }
-  handleDoubleClick() {
-    const {pos} = this.props;
-    this.setState({
-      dbState: JSON.toString(pos)
-    }, () => {
-      console.log('handleDoubleClick', this.state, pos);
-      this.props.moveKnight(pos)
-    })
-  }
   render() {
-    const { black } = this.props;
-    const fill = black ? '#212121' : 'white';
-    const stroke = black ? 'white' : '#212121';
-
+    const {isOver} = this.props;
     return (
-      <div onClick={() => this.handleDoubleClick()}>
+      <div className={classNames({
+        'dnd-is-over': isOver
+      })}>
         {this.props.children}
-        {this.state.dbClicked}
       </div>
     );
   }
 }
-
-Square.propTypes = {
-  black: PropTypes.bool
-};

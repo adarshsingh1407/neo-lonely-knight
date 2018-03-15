@@ -4,46 +4,53 @@ body {
   font-family: sans-serif;
 }
 
-.chess {
-  margin: 10px;
-  padding: 20px 0px 0px 20px;
-  font-family: sans-serif;
-  width: 48vw;
-  /* height: 100%; */
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.square {
-  width: 6vw;
-  height: 6vw;
-}
-
-/* //////// */
-
 .chessboard {
-    width: 640px;
-    height: 640px;
+    width: 560px;
+    height: 560px;
     margin: 20px;
     border: 25px solid #333;
 }
 .black {
     float: left;
-    width: 80px;
-    height: 80px;
-    background-color: #999;
-      font-size:50px;
-    text-align:center;
-    display: table-cell;
-    vertical-align:middle;
-}
-.white {
-    float: left;
-    width: 80px;
-    height: 80px;
-    background-color: #fff;
+    width: 70px;
+    height: 70px;
     font-size:50px;
     text-align:center;
     display: table-cell;
     vertical-align:middle;
+    background-color: #999;
+}
+.white {
+    float: left;
+    width: 70px;
+    height: 70px;
+    font-size:50px;
+    text-align:center;
+    display: table-cell;
+    vertical-align:middle;
+    background-color: #fff;
+}
+
+.dnd-is-dragging {
+  opacity: 0.5
+}
+
+.dnd-is-over {
+  float: left;
+  width: 70px;
+  height: 70px;
+  font-size:50px;
+  text-align:center;
+  display: table-cell;
+  vertical-align:middle;
+  z-index: 1;
+  opacity: 0.5;
+}
+
+.dnd-is-over-allowed {
+  background-color: #4CAF50;
+}
+
+.dnd-is-over-not-allowed {
+  background-color: #FF5722;
 }

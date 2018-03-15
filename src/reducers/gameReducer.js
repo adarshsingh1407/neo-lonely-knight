@@ -17,19 +17,18 @@ const chessMove = (state = DEFAULT_GAME_STATE, action) => {
     case INIT_GAME:
       return DEFAULT_GAME_STATE;
     case MOVE_KNIGHT:
-    // console.log(state, payload);
-    //   if (canMoveKnight(state.knightPosition, payload.newKnightPosition)) {
-    //     return {
-    //       ...state,
-    //       knightPosition: payload.newKnightPosition
-    //     }
-    //   } else {
-    //     return state;
-    //   }
-    return {
-      ...state,
-      knightPosition: payload.newKnightPosition
-    }
+      if (canMoveKnight(state.knightPosition, payload.newKnightPosition)) {
+        return {
+          ...state,
+          knightPosition: payload.newKnightPosition
+        }
+      } else {
+        return state;
+      }
+    // return {
+    //   ...state,
+    //   knightPosition: payload.newKnightPosition
+    // }
     default:
       return state;
   }
