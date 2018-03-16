@@ -8,7 +8,6 @@ body {
     width: 560px;
     height: 560px;
     margin: 20px;
-    border: 25px solid #333;
 }
 .black {
     float: left;
@@ -19,6 +18,7 @@ body {
     display: table-cell;
     vertical-align:middle;
     background-color: #999;
+    border: 1px solid;
 }
 .white {
     float: left;
@@ -29,6 +29,7 @@ body {
     display: table-cell;
     vertical-align:middle;
     background-color: #fff;
+    border: 1px solid;
 }
 
 .dnd-is-dragging {
@@ -53,4 +54,29 @@ body {
 
 .dnd-is-over-not-allowed {
   background-color: #FF5722;
+}
+
+.kanban-list {
+  border: 1px solid gray;
+	padding: 0.5rem 1rem;
+	margin-bottom: .5rem;
+  margin-right: 0.5rem;
+	background-color: white;
+	cursor: move;
+  /* width: 250px; */
+}
+
+.kanban-card {
+  border: 1px dashed gray;
+	padding: 0.5rem 1rem;
+	margin-bottom: .5rem;
+	background-color: white;
+	cursor: move;
+  text-align:right;
+  width: auto;
+}
+
+.kanban-list-title {
+  font-size:20px;
+  text-align:left;
 }

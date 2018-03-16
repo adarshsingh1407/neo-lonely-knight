@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Square from 'presentational/Square';
-import {ItemTypes} from 'dnd/itemTypes'
+import Square from 'presentational/chess/Square';
+import {ItemTypes} from 'dnd/chess/chessPieceTypes'
 import { DropTarget } from 'react-dnd';
 import {canMoveKnight} from 'utils/chessUtil'
 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import classNames from 'classnames'
 import {DragSource} from 'react-dnd'
-import {ItemTypes} from 'dnd/itemTypes'
+import {ItemTypes} from 'dnd/chess/chessPieceTypes'
 
 const knightSource = {
   beginDrag: (props) => {

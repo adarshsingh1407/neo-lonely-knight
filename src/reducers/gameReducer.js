@@ -25,10 +25,6 @@ const chessMove = (state = DEFAULT_GAME_STATE, action) => {
       } else {
         return state;
       }
-    // return {
-    //   ...state,
-    //   knightPosition: payload.newKnightPosition
-    // }
     default:
       return state;
   }

@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import Knight from './Knight';
-import BoardSquare from 'container/BoardSquare'
-import { DragDropContext } from 'react-dnd';
-import {Grid, Row, Col} from 'react-bootstrap'
-import HTML5Backend from 'react-dnd-html5-backend';
+import BoardSquare from 'container/chess/BoardSquare'
 
 class Board extends Component {
   constructor(props){
@@ -45,24 +42,11 @@ class Board extends Component {
     }
 
     return (
-      <div>
-        <Grid>
-          <Row>
-            <Col md={12}>
-              <b>Instructions: </b>Move the knight by drag-and-drop or clicking the destination square
-            </Col>
-          </Row>
-          <Row>
-            <Col md={12}>
-              <div className="chessboard">
-                {squares}
-              </div>
-            </Col>
-          </Row>
-        </Grid>
+      <div className="chessboard">
+        {squares}
       </div>
     );
   }
 }
 
-export default DragDropContext(HTML5Backend)(Board);
+export default Board;

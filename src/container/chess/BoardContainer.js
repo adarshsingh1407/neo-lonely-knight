@@ -3,7 +3,7 @@ import {
   moveKnight,
   initGame
 } from 'actions/chessActions'
-import Board from 'presentational/Board'
+import Board from 'presentational/chess/Board'
 
 const mapDispatchToProps = dispatch => {
   return {
