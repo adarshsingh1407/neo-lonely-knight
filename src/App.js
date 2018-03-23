@@ -28,7 +28,7 @@ const GAMES = [{
 
 const getGameById = (key) => GAMES.find((game) => game.key === key)
 
-const DEFAULT_ACTIVE_GAME = getGameById('kanban');
+const DEFAULT_ACTIVE_GAME = getGameById('lonely-knight');
 
 const Instructions = (props) => {
   return (<div><b>Instructions: </b>{props.activeGame.instructions}</div>)
