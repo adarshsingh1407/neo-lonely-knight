@@ -62,7 +62,7 @@ body {
 	margin-bottom: .5rem;
   margin-right: 0.5rem;
 	background-color: white;
-	cursor: move;
+	cursor: pointer;
   /* width: 250px; */
 }
 
@@ -71,9 +71,21 @@ body {
 	padding: 0.5rem 1rem;
 	margin-bottom: .5rem;
 	background-color: white;
-	cursor: move;
+	cursor: pointer;
   text-align:right;
   width: auto;
+}
+
+.kanban-card-is-dragging {
+  opacity: 0.5;
+}
+
+.kanban-card-is-over-allowed {
+  background-color: #4CAF50;
+}
+
+.kanban-card-is-over-not-allowed {
+  background-color: #FF5722;
 }
 
 .kanban-list-title {

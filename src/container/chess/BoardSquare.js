@@ -58,4 +58,6 @@ class BoardSquare extends Component {
   }
 }
 
-export default DropTarget(ItemTypes.KNIGHT, squareTarget, collect)(BoardSquare);
+const BoardSquareDropTarget = DropTarget(ItemTypes.KNIGHT, squareTarget, collect)(BoardSquare);
+
+export default BoardSquareDropTarget;
