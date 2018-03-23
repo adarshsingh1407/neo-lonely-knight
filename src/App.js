@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
-import BoardContainer from 'container/chess/BoardContainer';
-import KanbanBoardContainer from 'container/kanban/KanbanBoardContainer';
-import {
-  Grid,
-  Row,
-  Col,
-  Tabs,
-  Tab
-} from 'react-bootstrap';
-import AppBar from 'material-ui/AppBar';
+// import BoardContainer from 'container/chess/BoardContainer';
+// import KanbanBoardContainer from 'container/kanban/KanbanBoardContainer';
+// import {
+//   Grid,
+//   Row,
+//   Col,
+//   Tabs,
+//   Tab
+// } from 'react-bootstrap';
+// import AppBar from 'material-ui/AppBar';
 import { DragDropContext } from 'react-dnd';
 import HTML5Backend from 'react-dnd-html5-backend';
+import Lifecycle from 'presentational/tutorial/Lifecycle'
 
 const GAMES = [{
   key: 'lonely-knight',
@@ -28,7 +29,7 @@ const GAMES = [{
 
 const getGameById = (key) => GAMES.find((game) => game.key === key)
 
-const DEFAULT_ACTIVE_GAME = getGameById('kanban');
+const DEFAULT_ACTIVE_GAME = getGameById('ivrs');
 
 const Instructions = (props) => {
   return (<div><b>Instructions: </b>{props.activeGame.instructions}</div>)
@@ -50,32 +51,34 @@ class App extends Component {
     const {activeGame} = this.state;
     return (
       <div>
-        <AppBar
+        <Lifecycle />
+        {/* <AppBar
           title={activeGame.name}
           style={{backgroundColor: '#424242'}}
           iconClassNameRight="muidocs-icon-navigation-expand-more"
-        />
-        <Grid>
+          />
+          <Grid>
           <Row>
             <Col md={12}>
-              <Tabs id="chooseGame" activeKey={activeGame.key}
-                onSelect={this.handleGameSelection.bind(this)}
-                defaultActiveKey={'lonely-knight'}>
-                <Tab eventKey={'lonely-knight'} title="The Lonely Knight">
-                  <Instructions activeGame={activeGame} />
-                  <BoardContainer />
-                </Tab>
-                <Tab eventKey={'kanban'} title="Kanban">
-                  <Instructions activeGame={activeGame} />
-                  <KanbanBoardContainer />
-                </Tab>
-                <Tab eventKey={'ivrs'} title="IVRS">
-                  <Instructions activeGame={activeGame} />
-                </Tab>
-              </Tabs>
+          <Tabs id="chooseGame" activeKey={activeGame.key}
+          onSelect={this.handleGameSelection.bind(this)}
+          defaultActiveKey={'lonely-knight'}>
+          <Tab eventKey={'lonely-knight'} title="The Lonely Knight">
+          <Instructions activeGame={activeGame} />
+          <BoardContainer />
+          </Tab>
+          <Tab eventKey={'kanban'} title="Kanban">
+          <Instructions activeGame={activeGame} />
+          <KanbanBoardContainer />
+          </Tab>
+          <Tab eventKey={'ivrs'} title="IVRS">
+          <Instructions activeGame={activeGame} />
+          <Lifecycle isLoggedIn={false} />
+          </Tab>
+          </Tabs>
             </Col>
           </Row>
-        </Grid>
+        </Grid> */}
       </div>
       // <Board knightPosition={[0, 0]} />
     );
